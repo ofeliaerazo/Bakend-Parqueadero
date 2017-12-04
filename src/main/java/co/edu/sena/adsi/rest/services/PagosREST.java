@@ -43,19 +43,16 @@ public class PagosREST {
     }
     
     @POST
-    public void create(Pagos pagos){
-        pagosEJB.create(pagos);
-    }
-    @POST
     public Response create(@QueryParam("placa") String placa,
                            @QueryParam("fecha_entrada") Date fecha_entrada){
         try {
+            Pagos newPago = new Pagos();
             
+            pagosEJB.create(newPago);
         } 
-        catch {
-            
+        catch (Exception e) {
+            System.out.println("ERROR" + e);
         }
-        
     }
     
     @PUT
