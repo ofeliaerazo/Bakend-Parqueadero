@@ -5,7 +5,7 @@
  */
 package co.edu.sena.adsi.jpa.sessions;
 
-import co.edu.sena.adsi.jpa.entites.Puestos;
+import co.edu.sena.adsi.jpa.entites.Parqueadero;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author darkreaven
  */
 @Stateless
-public class PuestosFacade extends AbstractFacade<Puestos> {
+public class ParqueaderoFacade extends AbstractFacade<Parqueadero> {
 
     @PersistenceContext(unitName = "co.edu.sena.adsi.jpa_Parqueadero_war_1.0-SNAPSHOTPU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class PuestosFacade extends AbstractFacade<Puestos> {
         return em;
     }
 
-    public PuestosFacade() {
-        super(Puestos.class);
+    public ParqueaderoFacade() {
+        super(Parqueadero.class);
     }
     
 }
